@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body class="centralize">
+        <form>
+            <div class="form-field">
+                <div><label>Email</label></div>
+                <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"/>
+                <div class="error" id="email-required-error">Email é obrigatório</div>
+                <div class="error" id="email-invalid-error">Email é inválido</div>
+            </div>
+            <div class="form-field">
+                <div><label>Senha</label></div>
+                <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+                <div class="error" id="password-required-error">Senha é obrigatória</div>
+            </div>
+            <div>
+                <button type="button" class="clear" id="recover-password-button" disabled="true" onclick="recoverPassword()">Recuperar senha</button>
+            </div>
+            <div>
+                <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+            </div>
+            <div>
+                <button type="button" class="outline" onclick="register()">Registrar</button>
+            </div>
+        </form>
+    </body>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+    
+    <script src="script.js"></script>
+    <script src="validations.js"></script>
+    <script src="loading.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD_s8bW9bhjldmDU1qAXTa4OsmR5TLTjoc",
+        authDomain: "controle-de-dados-11909.firebaseapp.com",
+        projectId: "controle-de-dados-11909",
+        storageBucket: "controle-de-dados-11909.firebasestorage.app",
+        messagingSenderId: "372860523291",
+        appId: "1:372860523291:web:11c7b53634291069b7f9be"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
