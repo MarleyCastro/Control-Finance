@@ -1,0 +1,30 @@
+body {
+    background: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.clear{
+    background: transparent;
+    border: none;
+    color: rgb(255, 0, 0);
+}
+
+head{
+    text-align: right;
+}
+
+header {
+    padding: 20px;
+    background-color: rgb(45, 103, 211);
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color:  rgb(45, 103, 211);
+    border: 3px solid rgb(4, 8, 16);
+}
+
+header button{
+    width: auto;
+}
